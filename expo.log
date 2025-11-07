@@ -1,0 +1,30 @@
+Starting project at /goinfre/foulare/echo-template
+React Compiler enabled
+Starting Metro Bundler
+Waiting on http://localhost:8081
+Logs for your project will appear below.
+Web node_modules/expo-router/entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Web node_modules/expo-router/entry.js ▓▓▓▓░░░░░░░░░░░░ 25.0% ( 8/16)
+λ node_modules/expo-router/node/render.js ░░░░░░░░░░░░░░░░  5.7% ( 13/121)
+Web node_modules/expo-router/entry.js ▓▓▓▓░░░░░░░░░░░░ 25.0% ( 99/209)
+λ node_modules/expo-router/node/render.js ▓▓▓░░░░░░░░░░░░░ 24.4% (170/344)
+Web node_modules/expo-router/entry.js ▓▓▓▓▓▓░░░░░░░░░░ 39.5% (209/334)
+λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓░░░░░░░ 62.3% (404/512)
+Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓░░░░░░░░ 54.4% (396/537)
+λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓▓░░░ 83.8% (532/581)
+Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 90.9% (665/721)
+λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 95.3% (671/706)
+λ Bundled 19816ms node_modules/expo-router/node/render.js (776 modules)
+λ  WARN  props.pointerEvents is deprecated. Use style.pointerEvents 
+Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (818/818)
+Web Bundled 22841ms node_modules/expo-router/entry.js (818 modules)
+Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓░░░░░░░░ 55.5% (371/498)
+Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 91.2% (743/778)
+Web Bundled 6024ms node_modules/expo-router/entry.js (820 modules)
+ LOG  [web] Logs will appear in the browser console
+Web node_modules/expo-router/entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+λ  WARN  props.pointerEvents is deprecated. Use style.pointerEvents 
+λ Bundled 39ms node_modules/expo-router/node/render.js (1 module)
+Web Bundled 270ms node_modules/expo-router/entry.js (1 module)
+Web Bundled 22ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
