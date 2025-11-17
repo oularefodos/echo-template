@@ -1,6 +1,6 @@
-import { cn } from "@/lib/utils";
 import * as React from "react";
 import { Platform, TextInput } from "react-native";
+import { cn } from "@/lib/utils";
 
 const Input = React.forwardRef<
 	TextInput,

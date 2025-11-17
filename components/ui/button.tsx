@@ -1,13 +1,13 @@
-import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";
 import {
-  Pressable,
-  type PressableStateCallbackType,
-  type PressableProps as RNPressableProps,
-  View,
-  type ViewStyle,
+	Pressable,
+	type PressableStateCallbackType,
+	type PressableProps as RNPressableProps,
+	View,
+	type ViewStyle,
 } from "react-native";
+import { cn } from "@/lib/utils";
 
 export const buttonVariants = cva(
 	"flex-row items-center justify-center rounded-lg",

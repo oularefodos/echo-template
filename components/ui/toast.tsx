@@ -1,7 +1,7 @@
-import { cn } from "@/lib/utils";
 import { cva } from "class-variance-authority";
 import * as React from "react";
 import { Animated, StyleSheet, Text, View } from "react-native";
+import { cn } from "@/lib/utils";
 
 type ToastType = "default" | "success" | "error" | "warning" | "info";
 
@@ -57,7 +57,13 @@ const toastTextVariants = cva("text-sm font-medium", {
 interface ToastProviderProps {
 	children: React.ReactNode;
 	duration?: number;
-	position?: "top" | "bottom" | "top-left" | "top-right" | "bottom-left" | "bottom-right";
+	position?:
+		| "top"
+		| "bottom"
+		| "top-left"
+		| "top-right"
+		| "bottom-left"
+		| "bottom-right";
 }
 
 export function ToastProvider({
@@ -120,9 +126,17 @@ export function ToastProvider({
 			case "top-right":
 				return { top: 50, right: sideMargin, alignSelf: "flex-end" as const };
 			case "bottom-left":
-				return { bottom: 50, left: sideMargin, alignSelf: "flex-start" as const };
+				return {
+					bottom: 50,
+					left: sideMargin,
+					alignSelf: "flex-start" as const,
+				};
 			case "bottom-right":
-				return { bottom: 50, right: sideMargin, alignSelf: "flex-end" as const };
+				return {
+					bottom: 50,
+					right: sideMargin,
+					alignSelf: "flex-end" as const,
+				};
 			default:
 				return { bottom: 50, alignSelf: "center" as const };
 		}
@@ -178,4 +192,3 @@ const styles = StyleSheet.create({
 
 export { toastTextVariants, toastVariants };
 export type { ToastProviderProps, ToastType };
-

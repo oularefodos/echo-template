@@ -1,6 +1,6 @@
-import { cn } from "@/lib/utils";
 import * as React from "react";
 import { Platform, Pressable, Text, View } from "react-native";
+import { cn } from "@/lib/utils";
 
 interface TabsProps {
 	defaultValue?: string;
