@@ -4,6 +4,7 @@ import {
 	LayoutAnimation,
 	Platform,
 	Pressable,
+	type PressableProps,
 	UIManager,
 	View,
 } from "react-native";
@@ -113,12 +114,12 @@ const CollapsibleTrigger = React.forwardRef<View, CollapsibleTriggerProps>(
 				onPress: toggle,
 				accessibilityRole: "button",
 				accessibilityState: { expanded: open },
-			} as any);
+			} as Partial<PressableProps>);
 		}
 
 		return (
 			<Pressable
-				ref={ref as any}
+				ref={ref}
 				className={cn(
 					"flex-row items-center justify-between p-4 active:opacity-70",
 					className,

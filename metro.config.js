@@ -1,6 +1,6 @@
 const { getDefaultConfig } = require("expo/metro-config");
 const { withNativeWind } = require("nativewind/metro");
-const path = require("path"); // <-- Import path
+const path = require("node:path"); // <-- Import path
 
 // Get the default configuration
 // eslint-disable-next-line no-undef

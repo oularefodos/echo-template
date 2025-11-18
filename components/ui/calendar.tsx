@@ -803,7 +803,7 @@ export function Calendar({
 				<WeekdaysRow orderedWeekdays={orderedWeekdays} />
 
 				<View className="flex-row flex-wrap">
-					{getDaysInMonth(currentDate).map((date, index) => (
+					{getDaysInMonth(currentDate).map((date: Date, index: number) => (
 						<CalendarDay
 							key={index}
 							date={date}

@@ -110,10 +110,15 @@ const AccordionItem = ({ value, className, children }: AccordionItemProps) => {
 		<View className={cn("border-b border-border", className)}>
 			{React.Children.map(children, (child) => {
 				if (React.isValidElement(child)) {
-					return React.cloneElement(child as React.ReactElement<any>, {
-						value,
-						isExpanded,
-					});
+					return React.cloneElement(
+						child as React.ReactElement<
+							AccordionTriggerProps | AccordionContentProps
+						>,
+						{
+							value,
+							isExpanded,
+						},
+					);
 				}
 				return child;
 			})}
@@ -181,7 +186,6 @@ interface AccordionContentProps {
 const AccordionContent = ({
 	className,
 	children,
-	value,
 	isExpanded,
 }: AccordionContentProps) => {
 	if (!isExpanded) {

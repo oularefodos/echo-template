@@ -15,7 +15,14 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true
+			"recommended": true,
+			"suspicious": {
+				"noExplicitAny": "warn"
+			},
+			"correctness": {
+				"noUnusedVariables": "warn",
+				"noUnusedFunctionParameters": "warn"
+			}
 		}
 	},
 	"javascript": {
@@ -30,5 +37,13 @@
 				"organizeImports": "on"
 			}
 		}
-	}
+	},
+	"overrides": [
+		{
+			"includes": ["global.css"],
+			"linter": {
+				"enabled": false
+			}
+		}
+	]
 }

@@ -2,6 +2,7 @@ import * as React from "react";
 import {
 	Animated,
 	Dimensions,
+	type GestureResponderEvent,
 	KeyboardAvoidingView,
 	Modal,
 	Platform,
@@ -53,12 +54,16 @@ interface AlertDialogDescriptionProps {
 }
 
 interface AlertDialogActionProps {
-	children: React.ReactElement<{ onPress?: (e: any) => void }>;
+	children: React.ReactElement<{
+		onPress?: (e: GestureResponderEvent) => void;
+	}>;
 	className?: string;
 }
 
 interface AlertDialogCancelProps {
-	children: React.ReactElement<{ onPress?: (e: any) => void }>;
+	children: React.ReactElement<{
+		onPress?: (e: GestureResponderEvent) => void;
+	}>;
 	className?: string;
 }
 
@@ -109,21 +114,20 @@ const AlertDialogTrigger = React.forwardRef<View, AlertDialogTriggerProps>(
 
 		if (asChild) {
 			const child = React.Children.only(children) as React.ReactElement<{
-				onPress?: (e: any) => void;
-				ref?: React.Ref<any>;
+				onPress?: (e: GestureResponderEvent) => void;
+				ref?: React.Ref<View>;
 				disabled?: boolean;
 			}>;
 			return React.cloneElement(child, {
 				...props,
 				ref,
-				onPress: (e: any) => {
+				onPress: (e: GestureResponderEvent) => {
 					child.props?.onPress?.(e);
 					setOpen(true);
 				},
 				disabled,
 			});
 		}
-
 		return (
 			<Pressable
 				ref={ref}
@@ -316,13 +320,13 @@ const AlertDialogDescription = React.forwardRef<
 AlertDialogDescription.displayName = "AlertDialogDescription";
 
 const AlertDialogAction = React.forwardRef<View, AlertDialogActionProps>(
-	({ children, ...props }, ref) => {
+	({ children, ...props }, _ref) => {
 		const { handleClose } = React.useContext(AlertDialogContext);
 
 		return React.cloneElement(children, {
 			...children.props,
 			...props,
-			onPress: (e: any) => {
+			onPress: (e: GestureResponderEvent) => {
 				children.props?.onPress?.(e);
 				handleClose?.();
 			},
@@ -333,13 +337,13 @@ const AlertDialogAction = React.forwardRef<View, AlertDialogActionProps>(
 AlertDialogAction.displayName = "AlertDialogAction";
 
 const AlertDialogCancel = React.forwardRef<View, AlertDialogCancelProps>(
-	({ children, ...props }, ref) => {
+	({ children, ...props }, _ref) => {
 		const { handleClose } = React.useContext(AlertDialogContext);
 
 		return React.cloneElement(children, {
 			...children.props,
 			...props,
-			onPress: (e: any) => {
+			onPress: (e: GestureResponderEvent) => {
 				children.props?.onPress?.(e);
 				handleClose?.();
 			},
